@@ -6,16 +6,28 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * This class is a persitent class for user reviews.
+ * @author mindfire
+ *
+ */
 @Entity
 @Table(name = "reviews")
 public class Review {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+
 	private Long review_id;
+
 	private Long car_id;
+	
 	private Long user_id;
+	
 	private String title;
+	
 	private String review;
+	
 	private Integer rating;
 
 	public Long getCar_id() {

@@ -1,23 +1,54 @@
 package com.mindfire.carreview.DTO;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
+
+/**
+ * This is a DTO class for the user registration.
+ * @author mindfire
+ *
+ */
 public class UserRegistrationDto {
+	
 	private Long user_id;
+	
+	@NotNull @Size(min=4,max=10)
 	private String firstname;
+	
+	@NotNull @Size(min=3,max=10)
 	private String lastname;
-
+	
+	@NotNull @Email
 	private String email;
+	
+	@NotNull @Size(min=3,max=10)
 	private String username;
-
+	
+	@NotNull @Size(min=4,max=10)
 	private String password;
 
+	/**
+	 * No-arg constructor
+	 */
+	
+	/**
+	 * This a argumented constructor that hold the values to be stored.
+	 */
 	public UserRegistrationDto() {
 	}
 
 	public UserRegistrationDto(String firstname, String lastname, String email, String username, String password) {
+		
 		this.firstname = firstname;
+		
 		this.lastname = lastname;
+		
 		this.email = email;
+		
 		this.username = username;
+		
 		this.password = password;
 	}
 

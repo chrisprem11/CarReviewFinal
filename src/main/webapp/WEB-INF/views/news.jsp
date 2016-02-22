@@ -10,8 +10,47 @@
 </head>
 <body>
 <jsp:include page="head.jsp"></jsp:include>
+<pre>
 
-<h2> hello</h2>
+</pre>
+<!--News-->
+		<div class="container">
+			<section>
+				<div class="page-header" id="news">
+                    <a href="news.html" class="text-danger"><h2>News<small class="text-primary"> &nbsp check out the latest updates.</small></h2></a>
+				</div>
+				
+				<!--row-->
+				<div class="row">
+					<div class="col-md-6">
+                        <a href=""><h3 class="text-success"> Mercedes-Benz GLE Class </h3></a>
+							<p> hhjkbbhsghsbdhfjgvcgvghvgvcghcgcghchgcgvgh</p>
+					</div>
+					<div class="col-md-6">
+						<img src="resources/img/n3.jpg" class="img-responsive" alt="car">
+					</div>
+				</div><!--end of row-->
+				<div class="row">
+					<div class="col-md-6">
+							<a href=""><h3 class="text-success"> Mahindra KUV100 </h3></a>
+							<p> hhjkbbhsghsbdhfjgvcgvghvgvcghcgcghchgcgvgh</p>
+					</div>
+					<div class="col-md-6">
+						<img src="resources/img/n1.jpg" class="img-responsive" alt="car">
+					</div>
+				</div><!--end of row-->
+				<div class="row">
+					<div class="col-md-6">
+							<a href><h3 class="text-success">Maruti Alto K10 </h3></a>
+							<p> hhjkbbhsghsbdhfjgvcgvghvgvcghcgcghchgcgvghjbhvvghghcghcv  vhffgfgfgfgfgfghfghfghfghfgfgfgfghfghfghbbkjbkbkcvccvcgvgv</p>
+					</div>
+					<div class="col-md-6">
+						<img src="resources/img/n2.jpg" class="img-responsive" alt="car">
+					</div>
+				</div><!--end of row-->
+				
+			</section>
+		</div><!--End of container--><!--end of News-->
 
 <jsp:include page="footer.jsp"></jsp:include>
 </body>

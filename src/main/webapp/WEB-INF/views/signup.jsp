@@ -8,6 +8,7 @@
         <title>Member Login</title>
     <link rel="stylesheet" type="text/css" href="resources/css/bootstrap.css"/>
 	<link rel="stylesheet" type="text/css" href="resources/css/style.css"/>
+
     </head>
   <body style="background=#aabbcc;">
     <div class="container">
@@ -27,26 +28,32 @@
                                     <h2 class="text-primary"><strong>Become a member</strong></h2><span class="glyphicon glyphicon-user"></span>
 								</div>
 								<form:form class="well" action="signup" modelAttribute="user" method="POST" onsubmit="return validate();">
+										  <div> <h3>${message}</h3></div>
 										  <div class="form-group">
 											<label for="fname" class="text-warning">First Name</label>
-											<form:input path="firstname" cssClass="form-control" placeholder="first name" />
+											<form:input path="firstname" cssClass="form-control" placeholder="first name" pattern=".{4,10}" required="required" />
+											<form:errors path="firstname" cssclass="error"></form:errors>
 										  </div>
 										  <div class="form-group">
 											<label for="lname" class="text-warning">Last Name</label>
-											<form:input path="lastname" cssClass="form-control" placeholder="last name"/>
+											<form:input path="lastname" cssClass="form-control" placeholder="last name" pattern=".{10,16}"required="required"/>
+											<form:errors path="lastname" cssclass="error"></form:errors>
 										  </div>
 										  
                                         <div class="form-group">
 											<label for="email" class="text-warning">Email Address</label>
-											<form:input path="email" cssClass="form-control" placeholder="email"/>
+											<form:input path="email" cssClass="form-control" placeholder="email" type="email" required="required" />
+											<form:errors path="email" cssclass="error"></form:errors>
 										  </div>
 										   <div class="form-group">
 											<label for="username" class="text-warning">Username</label>
-											<form:input path="username" cssClass="form-control" placeholder="username"/>
+											<form:input path="username" cssClass="form-control" placeholder="username" pattern=".{4,8}" required="required" />
+											<form:errors path="username" cssclass="error"></form:errors>
 										  </div>
                                         <div class="form-group">
                                             <label for="password" class="text-warning">Password</label>
-											<form:password path="password" cssClass="form-control" placeholder="password"/>
+											<form:password path="password" cssClass="form-control" placeholder="password" pattern=".{4,10}"required="required"/>
+											<form:errors path="password" cssclass="error"></form:errors>
 										  </div>
 <!--                                             <div class="form-group"> -->
 <!--                                             <label for="confirmpassword" class="text-warning">Confirm-Password</label> -->

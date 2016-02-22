@@ -11,41 +11,7 @@
 </head>
 <body data-spy="scroll" data-target="#my-navbar">
 
-		<!--Navbar -->
-   
-		<nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">" 
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a href="/carreview/" class="navbar-brand"><span class="glyphicon glyphicon-home"></span> Car Reviews</a>
-				</div><!-- End of navbar Header -->
-                
-                <!--signup/login-->
-                <a href="/carreview/signup" class="btn btn-warning navbar-btn navbar-right" id="signup"><span class="glyphicon glyphicon-user"></span> Sign Up </a> 
-              <% if (session.getAttribute("role") == null || session.getAttribute("role").equals("")) { %>
-						<a href="/carreview/login" class="btn btn-warning navbar-btn navbar-right" id="login"><span class="glyphicon glyphicon-user"></span> Login </a> 
-					<% } else { %>
-					<a href="/carreview/login" class="btn btn-warning navbar-btn navbar-right" id="login"><span class="glyphicon glyphicon-user"></span> Logout </a> 
-					<% } %>
-					<ul class="nav navbar-nav">
-						<li><a href="#news"> News</a>
-						<li><a href="#gallery"> Gallery</a>
-						<li><a href="#brands">Top Brands</a>
-						<li><a href="#reviews"> Reviews</a>
-						
-						<li><a href="write"> Write a Review</a>
-						
-					</ul>
-				</div>
-			</div><!-- End Container-->
-		</nav>
-    
-		<!-- End Navbar -->
+<jsp:include page="head.jsp"></jsp:include>
 		
 		<!-- jumbotron -->
 		<div class="jumbotron">
@@ -54,54 +20,11 @@
 				<p class="text-primary">Choose the best. </p>
 			</div><!-- end of container-->
 		</div><!-- End of jumbotron-->
-		
-		<!--News-->
-		<div class="container">
-			<section>
-				<div class="page-header" id="news">
-                    <a href="news.html" class="text-danger"><h2>News<small class="text-primary"> &nbsp check out the latest updates.</small></h2></a>
-				</div>
-				
-				<!--row-->
-				<div class="row">
-					<div class="col-md-6">
-                        <a href=""><h3 class="text-success"> Mercedes-Benz GLE Class </h3></a>
-							<p> hhjkbbhsghsbdhfjgvcgvghvgvcghcgcghchgcgvgh</p>
-					</div>
-					<div class="col-md-6">
-						<img src="resources/img/n3.jpg" class="img-responsive" alt="car">
-					</div>
-				</div><!--end of row-->
-				<div class="row">
-					<div class="col-md-6">
-							<a href=""><h3 class="text-success"> Mahindra KUV100 </h3></a>
-							<p> hhjkbbhsghsbdhfjgvcgvghvgvcghcgcghchgcgvgh</p>
-					</div>
-					<div class="col-md-6">
-						<img src="resources/img/n1.jpg" class="img-responsive" alt="car">
-					</div>
-				</div><!--end of row-->
-				<div class="row">
-					<div class="col-md-6">
-							<a href><h3 class="text-success">Maruti Alto K10 </h3></a>
-							<p> hhjkbbhsghsbdhfjgvcgvghvgvcghcgcghchgcgvghjbhvvghghcghcv  vhffgfgfgfgfgfghfghfghfghfgfgfgfghfghfghbbkjbkbkcvccvcgvgv</p>
-					</div>
-					<div class="col-md-6">
-						<img src="resources/img/n2.jpg" class="img-responsive" alt="car">
-					</div>
-				</div><!--end of row-->
-				
-			</section>
-		</div><!--End of container--><!--end of News-->
-		
-
-
-	
 	<!--gallery-->
 	<div class="container">
 		<section>
 			<div class="page-header" id="gallery">
-					 <a href="gallery.html" class="text-danger"><h2>Gallery<small class="text-primary"> &nbsp have a closer look.</small></h2></a>
+					 <h2 class="text-danger" >Gallery<small class="text-primary"> &nbsp have a closer look.</small></h2>
 				</div>
 				
 				<div class="carousel slide" id="screenshot-carousel" data-ride="carousel">
@@ -139,7 +62,7 @@
 		<div class="container">
 			<section>
 				<div class="page-header" id="brands">
-                    <a href="topbrands.html" class="text-danger"><h2>Top Brands<small class="text-primary">&nbsp check out the most popular brands</small>                         </h2></a>
+                    <a href="topbrands" class="text-danger"><h2>Top Brands<small class="text-primary">&nbsp check out the most popular brands</small>                         </h2></a>
 						<div class="row">
 							<div class="col-md-4">
 								<div class="panel panel-default">
@@ -178,7 +101,7 @@
 		  <div class="container">
 			<section>
 				<div class="page-header" id="reviews">
-                    <a href="reviews.html" class="text-danger"><h2>Reviews<small class="text-primary">&nbsp most popular user reviews</small></h2></a>
+                    <a href="reviews" class="text-danger"><h2>Reviews<small class="text-primary">&nbsp most popular user reviews</small></h2></a>
 				</div><!--end page header-->
             </section>
 			</div>	

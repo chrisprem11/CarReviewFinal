@@ -9,6 +9,7 @@
 <link rel="stylesheet" type="text/css" href="resources/css/style.css"/>
 </head>
 <body>
+<% if (session.getAttribute("role") == "admin") { %>
 <jsp:include page="head.jsp"></jsp:include>
 <pre>
 
@@ -18,5 +19,9 @@
 
 <!-- <h2><a href="admin/gallery"> Update Gallery</a></h2> -->
 <!-- <h2><a href="admin/manageusers">Manage Users</a></h2> -->
+<% } %>
+
+<h3> This is a restricted page.</h3>
+
 </body>
 </html>

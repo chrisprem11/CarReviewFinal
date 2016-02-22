@@ -8,6 +8,16 @@
         <title>Admin Page: Add cars</title>
     <link rel="stylesheet" type="text/css" href="resources/css/bootstrap.css"/>
 	<link rel="stylesheet" type="text/css" href="resources/css/style.css"/>
+	<script>
+	function validate(){
+		var name=document.form.brand.value;
+		if(name.length>10)
+			{
+			alert("xyz");
+			}
+	}
+	
+	</script>
     </head>
   <body style="background=#aabbcc;">
     <div class="container">
@@ -26,7 +36,9 @@
 								<div class="page-header">
                                     <h2 class="text-primary"><strong>Add cars</strong></h2>
 								</div>
+								<div>${message}</div>
 								<form:form class="well" action="addCars" modelAttribute="addcar" method="POST" onsubmit="return validate();">
+										 
 										  <div class="form-group">
 											<label for="brand" class="text-warning">Brand</label>
 											<form:input path="brand" cssClass="form-control" placeholder="Car Brand" />

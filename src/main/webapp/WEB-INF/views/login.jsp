@@ -13,7 +13,7 @@
     <div class="container">
         <section>
             <div class="page-header">
-                <h1 class="text-info">Login Page</h1>
+                <h1 class="text-info">Car Reviews</h1>
             </div>
         <div class="row">
 			  <div class="col-md-8">
@@ -27,6 +27,7 @@
                                     <h2 class="text-primary"><strong>Login here</strong></h2><span class="glyphicon glyphicon-user"></span>
 								</div>
 								<h4>${status}</h4>
+								<h4>${message}</h4>
 								<form:form class="well" action="login" modelAttribute="login" method="POST" onsubmit="return validate();">
                                         <div class="form-group">
 											<label for="email" class="text-warning">Username</label>

@@ -1,8 +1,14 @@
 package com.mindfire.carreview.DTO;
 
+/**
+ * This is a DTO class that stores information for the login.
+ * @author mindfire
+ *
+ */
 public class UserSigninDto {
 
 	private String username;
+	
 	private String password;
 
 	public UserSigninDto() {
@@ -10,7 +16,9 @@ public class UserSigninDto {
 	}
 
 	public UserSigninDto(String username, String password) {
+		
 		this.username = username;
+		
 		this.password = password;
 
 	}
